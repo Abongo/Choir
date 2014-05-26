@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  voice: MyString
+  practice: MyText
+  attendance: 2014-05-13
+
+two:
+  name: MyString
+  voice: MyString
+  practice: MyText
+  attendance: 2014-05-13

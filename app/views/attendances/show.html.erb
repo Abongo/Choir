@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @attendance.member %>
+
+  <%= form_for @member do |f| %>
+<ul> <% @attendance.@records.each do |record| %>
+	<p>
+	<%= check_box_tag("record",record.id) %>
+	<%= record.name %>
+	</p>
+
+<% end %></ul>
+<%=form_for([@attendance,@attendance.records.build]) do |f| %>
+<% end %>
+<div class="actions"><%= f.submit 'Add record!!!' %> </div>
+<% end %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @attendance.record %>
+</p>
+
+<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+<%= link_to 'Back', attendances_path %>

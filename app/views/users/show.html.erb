@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<p><strong>Profile</strong>
+	<%= image_tag (user.picture_uploader_url.to_s :width => 600) if @user.picture.present? %>
+	</p>
+<%= image_tag user.picture_uploader_url.to_s( :width => 600) if @user.picture.present? %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

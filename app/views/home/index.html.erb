@@ -1,0 +1,16 @@
+<h1 align ="center">CovenantChoir</h1>
+
+<nav class="navbar navbar-default" role="navigation">
+<div class="active"><%= link_to('Members',members_path)%>
+<%= link_to('users',users_path)%>
+    </div>
+<div align ="right"><%=link_to('logout',destroy_user_session_path, method: :delete)%></div></nav>
+<p>Welcome <%=current_user.name %></p>
+
+
+<% if can? :manage, User %>
+<%= link_to('users',users_path)%>
+<% end %>
+
+
+ 
